@@ -1,5 +1,10 @@
 import moon from "./assets/icons/icon-moon.svg";
 import sun from "./assets/icons/icon-sun.svg";
+import company from "./assets/icons/icon-company.svg";
+import github from "./assets/icons/icon-github.svg";
+import location from "./assets/icons/icon-location.svg";
+import twitter from "./assets/icons/icon-twitter.svg";
+import website from "./assets/icons/icon-website.svg";
 
 // Get switchMode button
 const switchMode =
@@ -43,7 +48,7 @@ searchBarInput?.addEventListener("keyup", (e) => {
 card.innerHTML = `<div class="card-avatar">
             <div class="card-avatar-content">
               <img
-                src="/src/assets/icons/icon-github.svg"
+                src=${github}
                 alt="avatar"
                 class="avatar"
               />
@@ -82,17 +87,17 @@ card.innerHTML = `<div class="card-avatar">
             <div class="card-social">
               <div class="card-social-content">
                 <img
-                  src="/src/assets/icons/icon-location.svg"
+                  src=${location}
                   alt="location"
                 />
                 <span>San Francisco</span>
               </div>
               <div class="card-social-content">
-                <img src="/src/assets/icons/icon-twitter.svg" alt="twitter" />
+                <img src=${twitter} alt="twitter" />
                 <span>Not Available</span>
               </div>
               <div class="card-social-content">
-                <img src="/src/assets/icons/icon-website.svg" alt="link" />
+                <img src=${website} alt="link" />
                 <span class="repo-link"
                   ><a
                     href="https://github.blog"
@@ -103,7 +108,7 @@ card.innerHTML = `<div class="card-avatar">
                 >
               </div>
               <div class="card-social-content">
-                <img src="/src/assets/icons/icon-company.svg" alt="link" />
+                <img src=${company} alt="link" />
                 <span
                   ><a href="https://github.blog" target="_blank"
                     >@github</a
@@ -169,13 +174,13 @@ const fetchUsersFromGithubAPI = async (username: string) => {
             <div class="card-social">
               <div class="card-social-content">
                 <img
-                  src="/src/assets/icons/icon-location.svg"
+                  src=${location}
                   alt="location"
                 />
                 <span>${data.location}</span>
               </div>
               <div class="card-social-content">
-                <img src="/src/assets/icons/icon-twitter.svg" alt="twitter" />
+                <img src=${twitter} alt="twitter" />
                 <span>${
                   data.twitter_username
                     ? data.twitter_username
@@ -183,7 +188,7 @@ const fetchUsersFromGithubAPI = async (username: string) => {
                 }</span>
               </div>
               <div class="card-social-content">
-                <img src="/src/assets/icons/icon-website.svg" alt="link" />
+                <img src=${website} alt="link" />
                 <span
                 class="repo-link"
                   ><a
@@ -195,7 +200,7 @@ const fetchUsersFromGithubAPI = async (username: string) => {
                 >
               </div>
               <div class="card-social-content">
-                <img src="/src/assets/icons/icon-company.svg" alt="link" />
+                <img src=${company} alt="link" />
                 <span
                   ><a href="#" target="_blank"
                     >${data.company ? data.company : "Not Available"}</a
