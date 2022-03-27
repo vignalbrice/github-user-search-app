@@ -219,7 +219,9 @@ const fetchUsersFromGithubAPI = async (username: string) => {
       }
     }
   } catch (err) {
-    throw new Error(err);
+    if (err instanceof Error) {
+      throw new Error(err.message);
+    }
   }
 };
 
